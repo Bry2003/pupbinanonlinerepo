@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#f5f5f5"/>
+  <circle cx="400" cy="200" r="150" fill="#800000" opacity="0.2"/>
+  <rect x="300" y="150" width="200" height="250" rx="100" ry="100" fill="#e0e0e0"/>
+  <circle cx="400" cy="200" r="70" fill="#800000"/>
+  <rect x="350" y="270" width="100" height="120" fill="#800000"/>
+  <rect x="250" y="400" width="300" height="100" fill="#f5f5f5" rx="10" ry="10" stroke="#800000" stroke-width="2"/>
+  <text x="400" y="450" font-family="Arial" font-size="24" fill="#800000" text-anchor="middle">Campus Director</text>
+  <text x="400" y="480" font-family="Arial" font-size="18" fill="#333333" text-anchor="middle">PUP Biñan Campus</text>
+</svg>

@@ -1,0 +1,66 @@
+<?php
+ob_start();
+ini_set('date.timezone','Asia/Manila');
+date_default_timezone_set('Asia/Manila');
+
+// Start session if not already started
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+require_once('initialize.php');
+require_once('classes/DBConnection.php');
+
+$db = new DBConnection;
+$conn = $db->conn;
+
+// Check if connection is successful
+if(!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+// Initialize system settings
+require_once('classes/SystemSettings.php');
+$_settings = new SystemSettings();
+$_settings->load_system_info();
+
+function redirect($url=''){
+	if(!empty($url))
+	echo '<script>location.href="'.base_url.$url.'"</script>';
+}
+function validate_image($file){
+	if(!empty($file)){
+			// exit;
+        $ex = explode('?',$file);
+        $file = $ex[0];
+        $param =  isset($ex[1]) ? '?'.$ex[1]  : '';
+		if(is_file(base_app.$file)){
+			return base_url.$file.$param;
+		}else{
+			return base_url.'dist/img/no-image-available.png';
+		}
+	}else{
+		return base_url.'dist/img/no-image-available.png';
+	}
+}
+function isMobileDevice(){
+    $aMobileUA = array(
+        '/iphone/i' => 'iPhone', 
+        '/ipod/i' => 'iPod', 
+        '/ipad/i' => 'iPad', 
+        '/android/i' => 'Android', 
+        '/blackberry/i' => 'BlackBerry', 
+        '/webos/i' => 'Mobile'
+    );
+
+    //Return true if Mobile User Agent is detected
+    foreach($aMobileUA as $sMobileKey => $sMobileOS){
+        if(preg_match($sMobileKey, $_SERVER['HTTP_USER_AGENT'])){
+            return true;
+        }
+    }
+    //Otherwise return false..  
+    return false;
+}
+ob_end_flush();
+?>
