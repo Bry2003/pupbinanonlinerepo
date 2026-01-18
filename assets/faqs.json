@@ -1,0 +1,22 @@
+[
+  {"q":"How do I log in?","a":"Click the USER button, enter your email/ID and password, then submit. Use Forgot Password if needed.","tags":["login","account","auth"]},
+  {"q":"How do I log out?","a":"Open the menu and click Logout. Admins can also end sessions via Users → Sessions.","tags":["login","logout","account"]},
+  {"q":"How to register a new account?","a":"On the selection page, click Register. Fill required fields, capture your photo, and submit.","tags":["register","account","signup"]},
+  {"q":"Where do I upload archives?","a":"Go to Archives from the top navigation, click Submit Thesis/Capstone, then upload files and metadata.","tags":["archives","upload","thesis","capstone"]},
+  {"q":"Where do I submit projects?","a":"Open Projects, click Submit, add project details and attachments, then save.","tags":["projects","upload","submission"]},
+  {"q":"How to search archives?","a":"Use the search box in Archives. Filter by title, author, department, year.","tags":["archives","search","filter"]},
+  {"q":"How to change theme colors?","a":"Admins: Admin → System Info → Theme Settings. Adjust Primary/Accent/Secondary colors and save.","tags":["admin","theme","settings"]},
+  {"q":"Why is the USER button black?","a":"Accent may be set to black. Update Accent in Theme Settings or bind the button to Primary.","tags":["theme","ui","button"]},
+  {"q":"How to manage users?","a":"Admins: Admin → Users. Add, edit, deactivate users, and reset passwords.","tags":["admin","users","management"]},
+  {"q":"How to change my password?","a":"Open Profile, choose Change Password, enter current and new passwords, then save.","tags":["profile","password","account"]},
+  {"q":"How to update my profile photo?","a":"Go to Profile and upload a new image. Crop/adjust if prompted, then save.","tags":["profile","photo","account"]},
+  {"q":"Where do I see my submissions?","a":"Open My Archives to view all submissions. Click an item to see details.","tags":["archives","projects","profile"]},
+  {"q":"How do admins review applications?","a":"Admin → All Application. Filter, open an entry, review details, then approve, reject, or request changes.","tags":["admin","applications","review"]},
+  {"q":"How to create a new registration?","a":"Admin → Create New Registration. Fill required fields, then click Save.","tags":["admin","registration","create"]},
+  {"q":"How to contact support?","a":"Use the Help Bot in the lower-right. If unresolved, contact your administrator.","tags":["support","help","faq"]},
+  {"q":"How to start a guided tour?","a":"Type ‘tour’ in the bot or click Start Tour in the suggestions.","tags":["tour","guide","help"]},
+  {"q":"How to update the cover image?","a":"Admins: System Info → Update Cover. Upload a new banner image and save.","tags":["admin","cover","appearance"]},
+  {"q":"What file types are allowed?","a":"Common types include PDF, DOCX, and images (PNG/JPG). If blocked, check admin settings.","tags":["upload","files","policy"]},
+  {"q":"How to fix upload errors?","a":"Ensure file size/type meets requirements and your connection is stable. Try again or contact admin.","tags":["upload","error","support"]},
+  {"q":"Where is the Help page?","a":"Use the Help link in the top navigation or admin sidebar to open FAQs.","tags":["help","faq","navigation"]}
+]

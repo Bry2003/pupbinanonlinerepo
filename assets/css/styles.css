@@ -1,0 +1,115 @@
+/* Additional styles for layout improvements */
+
+/* Fix for content spacing */
+body.layout-top-nav .wrapper .content-wrapper {
+    margin-top: 6rem !important;
+}
+
+/* Improve navbar styling */
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: var(--pup-accent);
+}
+
+/* Improve card styling */
+.card {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Improve student image avatar */
+#student-img-avatar {
+    height: 25px;
+    width: 25px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+    #login-nav {
+        padding: 0.5em 1em !important;
+    }
+    
+    #top-Nav {
+        top: 2.5em;
+    }
+    
+    .text-sm .layout-navbar-fixed .wrapper .main-header ~ .content-wrapper, 
+    .layout-navbar-fixed .wrapper .main-header.text-sm ~ .content-wrapper {
+        padding-top: 5rem !important;
+    }
+}
+
+/* Mobile-specific fixed header offset and spacing */
+@media (max-width: 576px) {
+    /* Tighten header heights for small screens */
+    #login-nav {
+        padding: 0.4rem 0.75rem !important;
+    }
+    
+    #top-Nav {
+        top: 2.4rem !important;
+    }
+
+    /* Ensure content starts below the two fixed headers */
+    .wrapper .content-wrapper,
+    body.layout-top-nav .wrapper .content-wrapper {
+        padding-top: calc(2.4rem + 3rem + 0.75rem) !important; /* login-nav + top-Nav + safe gap */
+        margin-top: 0 !important;
+    }
+
+    /* Minor spacing tweaks for readability */
+    .content-header {
+        margin-top: 0.25rem !important;
+    }
+
+    .card {
+        margin-bottom: 0.75rem;
+    }
+}
+
+/* Mobile layout alignment adjustments */
+@media (max-width: 576px) {
+  /* Reduce hero height and ensure it sits below fixed navs */
+  #header {
+    height: 45vh;
+    margin-top: 3.6rem !important;
+  }
+
+  /* Tighter, centered site title for small screens */
+  .site-title {
+    font-size: 1.6rem;
+    line-height: 1.25;
+    text-align: center;
+    margin-bottom: 0.75rem;
+  }
+
+  /* Make the hero button comfortably tappable on mobile */
+  #header #enrollment {
+    width: 90%;
+    max-width: 360px;
+  }
+
+  /* Subtle content spacing below fixed header */
+  .content-wrapper {
+    padding-top: 0.75rem;
+  }
+
+  /* Consistent horizontal padding for content area */
+  .container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+}

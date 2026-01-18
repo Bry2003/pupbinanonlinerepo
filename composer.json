@@ -1,0 +1,7 @@
+{
+    "require": {
+        "aws/aws-sdk-php": "^3.337",
+        "supabase/supabase-php": "^0.0.1",
+        "kreait/firebase-php": "^5.26"
+    }
+}

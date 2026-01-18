@@ -1,0 +1,39 @@
+DEPLOYMENT GUIDE FOR INFINITYFREE.COM
+=======================================
+
+1. PREPARE FILES
+   - Rename 'production_config.sample.php' to 'production_config.php'.
+   - Open 'production_config.php' and update the database credentials.
+     (You will get these details from InfinityFree after creating a database).
+
+2. DATABASE SETUP
+   - Log in to InfinityFree Control Panel (cPanel).
+   - Go to "MySQL Databases".
+   - Create a new database (e.g., 'pupbinan_db').
+   - Note down the:
+     - MySQL Hostname (usually something like sql123.infinityfree.com)
+     - MySQL User Name (e.g., if0_12345678)
+     - MySQL Password (your vPanel password)
+     - MySQL Database Name (e.g., if0_12345678_pupbinan_db)
+   - Update 'production_config.php' with these values.
+   - Go to "phpMyAdmin" in the Control Panel.
+   - Select your database.
+   - Import the 'pupbinanonlinerepo_db.sql' file (if you have the SQL export).
+     * If you don't have the SQL file, export it from your local phpMyAdmin first.
+
+3. UPLOAD FILES
+   - Use an FTP client (like FileZilla) or the "Online File Manager".
+   - Upload ALL files from your project folder to the 'htdocs' folder on InfinityFree.
+     - IMPORTANT: Do NOT upload the 'c:\xampp\...' folder itself. 
+     - Upload the CONTENTS of your project folder into 'htdocs'.
+   - Ensure 'production_config.php' is uploaded.
+
+4. VERIFY
+   - Open your website URL.
+   - If you see a database connection error, double-check 'production_config.php'.
+   - If images are missing, ensure the 'uploads' folder permissions are set to 755 or 777 (if supported).
+
+TROUBLESHOOTING
+- "Connection failed": Wrong DB host, user, or password.
+- "404 Not Found": Missing .htaccess or files not in 'htdocs'.
+- "403 Forbidden": Directory listing is disabled (this is good) or index.php is missing.

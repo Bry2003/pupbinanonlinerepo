@@ -1,0 +1,17 @@
+# Enable Rewrite Engine
+RewriteEngine On
+
+# Prevent Directory Listing
+Options -Indexes
+
+# Set default index file
+DirectoryIndex index.php index.html
+
+# Error Pages
+ErrorDocument 403 /404.html
+ErrorDocument 404 /404.html
+ErrorDocument 500 /404.html
+
+# HTTPS Redirect (Optional, uncomment if SSL is active on InfinityFree)
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
