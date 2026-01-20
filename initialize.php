@@ -62,8 +62,8 @@ if(!defined('SUPABASE_S3_ENABLE')) define('SUPABASE_S3_ENABLE', getenv('SUPABASE
 if(!defined('AWS_S3_ENABLE')) define('AWS_S3_ENABLE', true);
 if(!defined('AWS_S3_BUCKET')) define('AWS_S3_BUCKET', 'filestoredintel');
 // NOTE: In production, prefer environment variables for credentials.
-if(!defined('AWS_ACCESS_KEY_ID')) define('AWS_ACCESS_KEY_ID', getenv('AWS_ACCESS_KEY_ID') ?: 'AKIAZIAABXY5X2FOY76Y');
-if(!defined('AWS_SECRET_ACCESS_KEY')) define('AWS_SECRET_ACCESS_KEY', getenv('AWS_SECRET_ACCESS_KEY') ?: '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');
+if(!defined('AWS_ACCESS_KEY_ID')) define('AWS_ACCESS_KEY_ID', getenv('AWS_ACCESS_KEY_ID') ?: '');
+if(!defined('AWS_SECRET_ACCESS_KEY')) define('AWS_SECRET_ACCESS_KEY', getenv('AWS_SECRET_ACCESS_KEY') ?: '');
 if(!defined('AWS_S3_REGION')) define('AWS_S3_REGION', 'us-east-1');
 if(!defined('AWS_S3_BASE_PREFIX')) define('AWS_S3_BASE_PREFIX', 'Files/');
 // Per‑feature S3 subpaths (can override via environment)
